@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+
+    <!-- Load the custom CSS style file -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Load FontAwesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <div class="main">
+        <div class="container box">
+            <div class="music">
+                <div class="music-player">
+                    <div class="header">
+                        <i class="fa fa-music"></i>
+                        <h2>Now Playing</h2>
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="details">
+                        <div class="track-art"></div>
+                        <p class="title">Song Title</p>
+                        <p class="artist">Artist Name</p>
+                    </div>
+                    <div class="controls">
+                        <div class="slider_container">
+                            <div class="current-time">00:00</div>
+                            <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                            <div class="total-duration">00:00</div>
+                        </div>
+                        <div class="buttons">
+                            <div class="random-track" onclick="randomTrack()">
+                                <i class="fas fa-random fa-2x" title="random"></i>
+                            </div>
+                            <div class="prev-track" onclick="prevTrack()">
+                                <i class="fa fa-step-backward fa-2x"></i>
+                            </div>
+                            <div class="playpause-track" onclick="playpauseTrack()">
+                                <i class="fa fa-play-circle fa-5x"></i>
+                            </div>
+                            <div class="next-track" onclick="nextTrack()">
+                                <i class="fa fa-step-forward fa-2x"></i>
+                            </div>
+                            <div class="repeat-track" onclick="repeatTrack()">
+                                <i class="fa fa-repeat fa-2x" title="repeat"></i>
+                            </div>
+                        </div>
+                        <div class="slider_container">
+                            <i class="fa fa-volume-up"></i>
+                            <input type="range" min="0" max="100" value="99" class="volume_slider" onchange="setVolume()">
+                        </div>
+                    </div>
+                
+                    <div id="wave">
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                        <span class="stroke"></span>
+                    </div>
+                </div>
+
+                <!-- PlayList -->
+                <div class="music-playlist">
+                    <!-- Header -->
+                    <div class="header playlist-header">
+                        <i class="fa fa-music"></i>
+                        <h2>Playlist</h2>
+                        <i class="fas fa-times"></i>
+                    </div>
+                    <!-- Playlist Item -->
+                    <div class="playlist-div">
+                        <!-- <div class="playlist">
+                            <span class="song-index">1</span>
+                            <p class="single-song">Song one</p>
+                        </div> --> 
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+        
+    <!-- Load the main script for the player -->
+    <script src="music.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
