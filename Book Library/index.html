@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Library</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header class="navbar">
+      <h1>Libaray</h1>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+      </div>
+      <input type="text" id="searchBox" placeholder="Search books..." onkeyup="searchBooks()">
+      <button type="submit">Search</button>
+    </header>
+
+    <div id="library-container">
+      <h2>Welcome to My Libaray</h2>
+      <form id="book-form">
+        <div>
+          <label for="title">Book Title:</label>
+          <input type="text" id="title" placeholder="Enter book name">
+        </div>
+        <div>
+          <label for="author">Book Author:</label>
+          <input type="text" id="author" placeholder="Enter author name">
+        </div>
+        <div>
+          <label for="isbn">Book ISBN Number:</label>
+          <input type="text" id="isbn" placeholder="Enter ISBN number">
+        </div>
+        <div>
+          <label for="category">Category:</label>
+          <select id="category">
+            <option value="">Select</option>
+            <option value="fiction">Fiction</option>
+            <option value="non-fiction">Non-Fiction</option>
+            <option value="programming">Programming</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Add Book</button>
+      </form>
+
+      <div class="book-list-table">
+        <h2>Book List</h2>
+        <table id="book-table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>ISBN</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="book-table-body">
+            <!-- Book entries will be inserted here --> 
+          </tbody>
+        </table>
+      </div>
+      <div class="borrowing-history-table">
+        <h2>Borrowing History</h2>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Title</th>
+              <th scope="col">Author</th>
+              <th scope="col">ISBN</th>
+              <th scope="col">Borrowed By</th>
+              <th scope="col">Borrowed On</th>
+            </tr>
+          </thead>
+          <tbody id="borrowing-history-body">
+            <!-- Borrowing history entries will be inserted here -->
+          </tbody>
+        </table>
+      </div>
+      <script src="script.js"></script>
+  </body>
+</html>
